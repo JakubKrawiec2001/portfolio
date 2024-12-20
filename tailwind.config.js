@@ -16,6 +16,7 @@ export default {
         "custom-gray": "#E3E2E7",
       },
       screens: {
+        xs: "400px",
         "2lg": "1100px",
         "3xl": "2000px",
       },

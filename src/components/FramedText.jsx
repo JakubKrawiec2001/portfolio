@@ -5,7 +5,7 @@ import border4 from "/icons/border-4.svg";
 
 const FramedText = () => {
   return (
-    <div className="relative px-6 py-4">
+    <div className="relative px-6 py-4 hidden 2lg:block">
       <img src={border1} alt="" className="absolute top-0 left-0" />
       <img src={border2} alt="" className="absolute bottom-0 left-0" />
       <img src={border3} alt="" className="absolute top-0 right-0" />
