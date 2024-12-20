@@ -23,7 +23,7 @@ const Nav = () => {
     <header
       className={`fixed inset-0 h-16 py-10 bg-[#f9f9f9] border-b-2 border-custom-black hidden md:flex items-center justify-between z-50 ${
         isScrolled
-          ? "mx-0 lg:px-12 transition-all duration-300"
+          ? "mx-0 md:px-4 lg:px-12 transition-all duration-300"
           : "lg:mx-12 md:px-4 lg:px-0 transition-all duration-300"
       }`}
     >

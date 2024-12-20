@@ -1,6 +1,6 @@
 const MobileMenu = () => {
   return (
-    <div className="flex justify-between items-center md:hidden fixed w-full left-0 top-0 py-3 px-4 z-50 ">
+    <div className="flex justify-between items-center md:hidden fixed w-full left-0 top-0 py-3 px-4 z-50 bg-white">
       <div>
         <p className="font-satoshi-black text-custom-blue text-xl">Krawiec</p>
         <p className="text-custom-black font-bitx text-sm">BASED IN POLAND</p>
