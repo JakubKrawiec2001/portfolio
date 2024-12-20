@@ -1,3 +1,4 @@
+import About from "./components/About";
 import Hero from "./components/Hero";
 import MobileMenu from "./components/MobileMenu";
 import Nav from "./components/Nav";
@@ -8,6 +9,7 @@ function App() {
       <Nav />
       <MobileMenu />
       <Hero />
+      <About />
       <br />
       <br />
       <br />

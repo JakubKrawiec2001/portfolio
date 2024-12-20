@@ -1,7 +1,7 @@
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const AnimatedText = ({ title, containerClass, delay = 0 }) => {
+const AnimatedText = ({ title, containerClass, delay = 0, duration }) => {
   const letterRefs = useRef([]);
 
   useEffect(() => {
@@ -12,16 +12,20 @@ const AnimatedText = ({ title, containerClass, delay = 0 }) => {
         opacity: 1,
         y: 0,
         stagger: 0.1,
-        duration: 0.6,
+        duration: duration,
         ease: "power3.out",
         delay: delay,
+        scrollTrigger: {
+          trigger: letterRefs.current,
+          start: "top bottom",
+        },
       }
     );
 
     return () => {
       animation.kill();
     };
-  }, [delay]);
+  }, [delay, duration]);
 
   return (
     <div className={`font-medium ${containerClass}`}>

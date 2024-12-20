@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 *,
 *::before,
 *::after {
@@ -16,21 +18,41 @@ body {
   width: 100dvw;
   overflow-x: hidden;
   background-color: #f9f9f9;
+  --sb-track-color: #222222;
+  --sb-thumb-color: #141dea;
+  --sb-size: 7px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 5px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+
+
 h1,
 h2,
 h3 {
   font-family: "Unbounded", sans-serif;
 }
-
-/* h1 {
-  font-size: clamp(2rem, 10vw - 1rem, 10vw - 2rem);
-} */
 
 @layer base {
   @font-face {

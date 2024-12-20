@@ -140,6 +140,7 @@ const Hero = () => {
 
             <AnimatedText
               title="Hello World"
+              duration={0.6}
               containerClass="font-bitx uppercase text-2xl md:text-5xl 2xl:text-6xl"
               delay={1}
             />
