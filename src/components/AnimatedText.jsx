@@ -1,11 +1,11 @@
-import { useRef, useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 
-const AnimatedTitle = ({ title, containerClass, delay = 0 }) => {
+const AnimatedText = ({ title, containerClass, delay = 0 }) => {
   const letterRefs = useRef([]);
 
   useEffect(() => {
-    gsap.fromTo(
+    const animation = gsap.fromTo(
       letterRefs.current,
       { opacity: 0, y: 50 },
       {
@@ -17,7 +17,11 @@ const AnimatedTitle = ({ title, containerClass, delay = 0 }) => {
         delay: delay,
       }
     );
-  }, []);
+
+    return () => {
+      animation.kill();
+    };
+  }, [delay]);
 
   return (
     <div className={`font-medium ${containerClass}`}>
@@ -34,4 +38,4 @@ const AnimatedTitle = ({ title, containerClass, delay = 0 }) => {
   );
 };
 
-export default AnimatedTitle;
+export default AnimatedText;
