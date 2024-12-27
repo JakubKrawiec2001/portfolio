@@ -68,13 +68,13 @@ const About = () => {
 		);
 
 		return () => {
-			animationOne.kill();
-			animationTwo.kill();
+			animationOne.revert();
+			animationTwo.revert();
 		};
 	}, []);
 
 	return (
-		<div className="flex flex-col gap-28 mt-[12em]">
+		<div className="flex flex-col gap-28 mt-[12em] pb-28">
 			<div className="flex justify-between items-start">
 				<div className="flex gap-6 items-start w-[70%]">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />

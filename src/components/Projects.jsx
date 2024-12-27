@@ -1,22 +1,93 @@
-import squares from "/icons/squares-3-white.svg";
+import squaresWhite from "/icons/squares-3-white.svg";
+import squaresBlack from "/icons/squares-3-black.svg";
 import bg from "/icons/project-bg.svg";
 import lines from "/icons/lines.svg";
 import { projects } from "../constansts";
 import CustomLink from "./CustomLink";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
+	const projectsSectionRef = useRef(null);
+	const projectsContainerRef = useRef(null);
+	const projectsCurrentElementRef = useRef([]);
+
+	useGSAP(() => {
+		const clipAnimation = gsap.timeline({
+			scrollTrigger: {
+				trigger: "#projectsSection",
+				start: "top +=100",
+				end: "+=800 center",
+				scrub: 0.5,
+				pin: true,
+				pinSpacing: true,
+			},
+		});
+
+		clipAnimation.fromTo(
+			projectsSectionRef.current,
+			{
+				clipPath: "polygon(14% 0, 72% 0, 88% 90%, 0 95%)",
+				borderRadius: "0% 0% 40% 10%",
+			},
+			{
+				clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+				borderRadius: "0% 0% 0% 0%",
+				width: "100vw",
+				height: "100vh",
+			}
+		);
+	});
+
+	useEffect(() => {
+		gsap.to(projectsCurrentElementRef.current, {
+			xPercent: -100 * (projectsCurrentElementRef.current.length - 1),
+			ease: "none",
+			scrollTrigger: {
+				trigger: projectsContainerRef.current,
+				start: "bottom bottom",
+				end: "+=" + projectsContainerRef.current.offsetWidth,
+				scrub: 1,
+				pin: true,
+				snap: 1 / (projectsCurrentElementRef.current - 1),
+			},
+		});
+
+		return () => {
+			ScrollTrigger.getAll().forEach((st) => st.kill());
+		};
+	});
+
 	return (
-		<div className="mt-[12em] bg-custom-black min-h-[50vh]">
-			<div className="px-4 2lg:px-12 py-24">
-				<div className="flex items-center justify-center gap-6 mb-24">
-					<img src={squares} alt="" className="size-[60px]" />
-					<h2 className="text-custom-white uppercase text-7xl">Projects</h2>
+		<>
+			<div id="projectsSection" className="relative min-h-screen w-screen">
+				<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
+					<img src={squaresBlack} alt="" className="size-[60px]" />
+					<h2 className="text-custom-black uppercase text-7xl">Projects</h2>
 				</div>
-				{projects.map((project) => {
+				<div
+					ref={projectsSectionRef}
+					className="bg-custom-black absolute left-1/2 top-0 -translate-x-1/2 overflow-hidden px-4 2lg:px-12 py-24">
+					<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
+						<img src={squaresWhite} alt="" className="size-[60px]" />
+						<h2 className="text-custom-white uppercase text-7xl">Projects</h2>
+					</div>
+				</div>
+			</div>
+
+			<div
+				className="bg-custom-black px-4 2lg:px-12 min-h-screen flex flex-nowrap space-x-10"
+				ref={projectsContainerRef}>
+				{projects.map((project, index) => {
 					return (
 						<div
+							ref={(el) => (projectsCurrentElementRef.current[index] = el)}
 							key={project.id}
-							className="flex flex-col gap-[6em] p-[4em]  relative bg-black rounded-[50px] overflow-hidden">
+							className="flex flex-col gap-[6em] p-[4em]  relative bg-black rounded-[50px] overflow-hidden w-screen shrink-0">
 							<img
 								src={bg}
 								alt=""
@@ -60,7 +131,7 @@ const Projects = () => {
 					);
 				})}
 			</div>
-		</div>
+		</>
 	);
 };
 

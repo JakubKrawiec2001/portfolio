@@ -4,77 +4,164 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 *,
 *::before,
 *::after {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
+/* html,
 body {
-  width: 100dvw;
-  overflow-x: hidden;
-  background-color: #f9f9f9;
-  --sb-track-color: #222222;
-  --sb-thumb-color: #141dea;
-  --sb-size: 7px;
+	height: 100%;
+} */
+
+body {
+	width: 100dvw;
+	overflow-x: hidden;
+	background-color: #f9f9f9;
+	--sb-track-color: #222222;
+	--sb-thumb-color: #141dea;
+	--sb-size: 7px;
 }
 
 body::-webkit-scrollbar {
-  width: var(--sb-size);
+	width: var(--sb-size);
 }
 
 body::-webkit-scrollbar-track {
-  background: var(--sb-track-color);
+	background: var(--sb-track-color);
 }
 
 body::-webkit-scrollbar-thumb {
-  background: var(--sb-thumb-color);
-  border-radius: 5px;
+	background: var(--sb-thumb-color);
+	border-radius: 5px;
 }
 
 @supports not selector(::-webkit-scrollbar) {
-  body {
-    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
-  }
+	body {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+	}
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-
+/* html {
+	scroll-behavior: smooth;
+} */
 
 h1,
 h2,
 h3 {
-  font-family: "Unbounded", sans-serif;
+	font-family: "Unbounded", sans-serif;
 }
 
 @layer base {
-  @font-face {
-    font-family: "satoshi-medium";
-    src: url("/fonts/satoshi-medium.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "satoshi-regular";
-    src: url("/fonts/satoshi-regular.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "satoshi-black";
-    src: url("/fonts/satoshi-black.woff2") format("woff2");
-  }
-  @font-face {
-    font-family: "bitx";
-    src: url("/fonts/bitx.woff2") format("woff2");
-  }
+	@font-face {
+		font-family: "satoshi-medium";
+		src: url("/fonts/satoshi-medium.woff2") format("woff2");
+	}
+	@font-face {
+		font-family: "satoshi-regular";
+		src: url("/fonts/satoshi-regular.woff2") format("woff2");
+	}
+	@font-face {
+		font-family: "satoshi-black";
+		src: url("/fonts/satoshi-black.woff2") format("woff2");
+	}
+	@font-face {
+		font-family: "bitx";
+		src: url("/fonts/bitx.woff2") format("woff2");
+	}
 }
 
 @layer utilities {
-  .wrapper {
-    @apply max-w-[1800px] mx-auto px-[1rem];
-  }
+	.wrapper {
+		@apply max-w-[1800px] mx-auto px-[1rem];
+	}
+	.clip-path {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
 }
+
+/* LOCOMOTIVE SCROLL */
+/* html.has-scroll-smooth {
+	overflow: hidden;
+}
+
+html.has-scroll-dragging {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.has-scroll-smooth body {
+	overflow: hidden;
+}
+
+.has-scroll-smooth [data-scroll-container] {
+	min-height: 100vh;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-container] {
+	height: 100vh;
+	display: inline-block;
+	white-space: nowrap;
+}
+
+[data-scroll-direction="horizontal"] [data-scroll-section] {
+	display: inline-block;
+	vertical-align: top;
+	white-space: nowrap;
+	height: 100%;
+}
+
+.c-scrollbar {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 11px;
+	height: 100%;
+	transform-origin: center right;
+	transition: transform 0.3s, opacity 0.3s;
+	opacity: 0;
+}
+.c-scrollbar:hover {
+	transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-scrolling .c-scrollbar,
+.has-scroll-dragging .c-scrollbar {
+	opacity: 1;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar {
+	width: 100%;
+	height: 10px;
+	top: auto;
+	bottom: 0;
+	transform: scaleY(1);
+}
+[data-scroll-direction="horizontal"] .c-scrollbar:hover {
+	transform: scaleY(1.3);
+}
+
+.c-scrollbar_thumb {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: black;
+	opacity: 0.5;
+	width: 7px;
+	border-radius: 10px;
+	margin: 2px;
+	cursor: -webkit-grab;
+	cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+	cursor: -webkit-grabbing;
+	cursor: grabbing;
+}
+[data-scroll-direction="horizontal"] .c-scrollbar_thumb {
+	right: auto;
+	bottom: 0;
+} */
