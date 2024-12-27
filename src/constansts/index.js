@@ -9,17 +9,17 @@ export const navLinks = [
 	{
 		id: 2,
 		label: "About Me",
-		path: "/about",
+		path: "/#about",
 	},
 	{
 		id: 3,
 		label: "My Projects",
-		path: "/projects",
+		path: "/#projects",
 	},
 	{
 		id: 4,
 		label: "Contact",
-		path: "/contact",
+		path: "/#contact",
 	},
 ];
 

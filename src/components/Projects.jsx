@@ -1,6 +1,5 @@
 import squaresWhite from "/icons/squares-3-white.svg";
 import squaresBlack from "/icons/squares-3-black.svg";
-import bg from "/icons/project-bg.svg";
 import lines from "/icons/lines.svg";
 import { projects } from "../constansts";
 import CustomLink from "./CustomLink";
@@ -19,9 +18,9 @@ const Projects = () => {
 	useGSAP(() => {
 		const clipAnimation = gsap.timeline({
 			scrollTrigger: {
-				trigger: "#projectsSection",
-				start: "top +=100",
-				end: "+=800 center",
+				trigger: "#projects",
+				start: "top +=50",
+				end: "+=800 top",
 				scrub: 0.5,
 				pin: true,
 				pinSpacing: true,
@@ -53,7 +52,6 @@ const Projects = () => {
 				end: "+=" + projectsContainerRef.current.offsetWidth,
 				scrub: 1,
 				pin: true,
-				snap: 1 / (projectsCurrentElementRef.current - 1),
 			},
 		});
 
@@ -64,7 +62,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<div id="projectsSection" className="relative min-h-screen w-screen">
+			<div id="projects" className="h-screen">
 				<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
 					<img src={squaresBlack} alt="" className="size-[60px]" />
 					<h2 className="text-custom-black uppercase text-7xl">Projects</h2>
@@ -80,22 +78,20 @@ const Projects = () => {
 			</div>
 
 			<div
-				className="bg-custom-black px-4 2lg:px-12 min-h-screen flex flex-nowrap space-x-10"
+				className="bg-custom-black px-4 2lg:px-12 flex items-center flex-nowrap space-x-10 h-screen"
 				ref={projectsContainerRef}>
 				{projects.map((project, index) => {
 					return (
 						<div
 							ref={(el) => (projectsCurrentElementRef.current[index] = el)}
 							key={project.id}
-							className="flex flex-col gap-[6em] p-[4em]  relative bg-black rounded-[50px] overflow-hidden w-screen shrink-0">
-							<img
-								src={bg}
-								alt=""
-								className="absolute w-full top-[-20%] right-0 blur-[130px] opacity-20 rotate-12"
-							/>
+							className="flex flex-col gap-[4em] p-[3em]  relative bg-black rounded-[50px] overflow-hidden w-[80vw] shrink-0">
 							<div className="flex justify-between items-start">
 								<div className="flex flex-col gap-4">
-									<h3 className="text-custom-white text-6xl">
+									<h3 className="text-custom-white text-4xl">
+										<span className="text-custom-white opacity-50 font-bitx">
+											#0{index + 1}
+										</span>{" "}
 										{project.label}
 									</h3>
 									<div className="flex flex-wrap content-center gap-x-8 gap-y-4 w-[60%] mt-6">
@@ -103,7 +99,7 @@ const Projects = () => {
 											return (
 												<p
 													key={i}
-													className="uppercase font-bitx text-custom-white text-2xl">
+													className="uppercase font-bitx text-custom-white text-xl">
 													{item}
 												</p>
 											);
