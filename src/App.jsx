@@ -8,15 +8,11 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import TechStack from "./components/TechStack";
 import Footer from "./components/Footer";
-// import { useRef } from "react";
-// import { useGSAP } from "@gsap/react";
+import Contact from "./components/Contact";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
-	// const container = useRef();
-	// const sectionOne = useRef();
-
 	const lenis = new Lenis();
 	lenis.on("scroll", () => {
 		ScrollTrigger.update;
@@ -26,23 +22,6 @@ function App() {
 		requestAnimationFrame(raf);
 	}
 	requestAnimationFrame(raf);
-
-	// useGSAP(() => {
-	// 	gsap.to(sectionOne.current, {
-	// 		scale: 0.8,
-	// 		rotate: "-10deg",
-	// 		backgroundColor: "blue",
-	// 		scrollTrigger: {
-	// 			trigger: container.current,
-	// 			start: "bottom top",
-	// 			end: "top" + sectionOne.current.offsetWidth,
-	// 			scrub: 1,
-	// 			pin: true,
-	// 			pinSpacing: true,
-	// 			markers: true,
-	// 		},
-	// 	});
-	// });
 
 	return (
 		<main className="min-h-screen w-screen">
@@ -57,8 +36,8 @@ function App() {
 				<div className="sticky min-h-[70vh] top-0 z-10 flex  flex-col justify-center gap-12 py-12 px-4 2lg:px-12">
 					<TechStack />
 				</div>
-				<div className="relative bg-custom-white min-h-[100vh] flex items-center justify-center z-20 px-4 2lg:px-12">
-					<p className="text-6xl text-custom-white">CONTACT</p>
+				<div className="relative bg-custom-black min-h-[70vh] flex flex-col justify-center gap-24 z-20 py-12 px-4 2lg:px-12">
+					<Contact />
 				</div>
 			</div>
 			<Footer />
