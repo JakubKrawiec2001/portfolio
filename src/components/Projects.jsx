@@ -6,7 +6,7 @@ import CustomLink from "./CustomLink";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -54,7 +54,7 @@ const Projects = () => {
 		});
 	});
 
-	useEffect(() => {
+	useGSAP(() => {
 		gsap.to(projectsCurrentElementRef.current, {
 			xPercent: -120 * (projectsCurrentElementRef.current.length - 1),
 			ease: "none",
@@ -70,18 +70,18 @@ const Projects = () => {
 		return () => {
 			ScrollTrigger.getAll().forEach((st) => st.kill());
 		};
-	}, []);
+	});
 	return (
 		<>
 			<div id="projects" className="h-[80vh] mt-[6em]">
-				<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
+				<div className="flex items-center justify-center gap-6 absolute top-20 left-1/2 -translate-x-1/2">
 					<img src={squaresBlack} alt="" className="size-[60px]" />
 					<h2 className="text-custom-black uppercase text-7xl">Projects</h2>
 				</div>
 				<div
 					ref={projectsSectionRef}
 					className="bg-custom-black absolute left-1/2 top-0 -translate-x-1/2 overflow-hidden px-4 2lg:px-12 py-24">
-					<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
+					<div className="flex items-center justify-center gap-6 absolute top-20 left-1/2 -translate-x-1/2">
 						<img src={squaresWhite} alt="" className="size-[60px]" />
 						<h2 className="text-custom-white uppercase text-7xl">Projects</h2>
 					</div>
@@ -89,7 +89,7 @@ const Projects = () => {
 			</div>
 
 			<div
-				className="bg-custom-black px-4 2lg:px-12 flex items-center flex-nowrap space-x-10 h-screen"
+				className="bg-custom-black px-4 2lg:px-12 flex items-center flex-nowrap space-x-10 min-h-screen"
 				ref={projectsContainerRef}>
 				<div className="main-projects">
 					<h2 className="text-custom-white uppercase text-7xl">

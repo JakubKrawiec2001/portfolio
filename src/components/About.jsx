@@ -118,7 +118,7 @@ const About = () => {
 				<div className="flex flex-col gap-2">
 					<AnimatedText
 						trigger="#aboutTrigger"
-						title="Solid"
+						title="Responsive design"
 						containerClass="font-bitx uppercase text-2xl"
 						duration={0.1}
 					/>
