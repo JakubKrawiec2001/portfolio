@@ -27,7 +27,6 @@ function App() {
 				<Nav />
 				<MobileMenu />
 				<Hero />
-
 				<About />
 			</div>
 			<Projects />

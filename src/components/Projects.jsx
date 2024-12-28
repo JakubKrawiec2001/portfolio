@@ -42,15 +42,27 @@ const Projects = () => {
 		);
 	});
 
+	useGSAP(() => {
+		gsap.to(".main-projects", {
+			x: "-150%",
+			scrollTrigger: {
+				trigger: projectsContainerRef.current,
+				start: "center center",
+				end: "bottom top",
+				scrub: 0.5,
+			},
+		});
+	});
+
 	useEffect(() => {
 		gsap.to(projectsCurrentElementRef.current, {
-			xPercent: -100 * (projectsCurrentElementRef.current.length - 1),
+			xPercent: -120 * (projectsCurrentElementRef.current.length - 1),
 			ease: "none",
 			scrollTrigger: {
 				trigger: projectsContainerRef.current,
 				start: "bottom bottom",
 				end: "+=" + projectsContainerRef.current.offsetWidth,
-				scrub: 1,
+				scrub: 0.1,
 				pin: true,
 			},
 		});
@@ -58,7 +70,7 @@ const Projects = () => {
 		return () => {
 			ScrollTrigger.getAll().forEach((st) => st.kill());
 		};
-	});
+	}, []);
 
 	return (
 		<>
@@ -80,12 +92,17 @@ const Projects = () => {
 			<div
 				className="bg-custom-black px-4 2lg:px-12 flex items-center flex-nowrap space-x-10 h-screen"
 				ref={projectsContainerRef}>
+				<h2 className="text-custom-white uppercase text-7xl main-projects">
+					Main Projects
+				</h2>
 				{projects.map((project, index) => {
 					return (
 						<div
 							ref={(el) => (projectsCurrentElementRef.current[index] = el)}
 							key={project.id}
 							className="flex flex-col gap-[4em] p-[3em]  relative bg-black rounded-[50px] overflow-hidden w-[80vw] shrink-0">
+							<div className="absolute bottom-[10%] left-1/2 translate-x-[-50%] bg-white blur-[100px]  opacity-30 size-[50%] rounded-full" />
+
 							<div className="flex justify-between items-start">
 								<div className="flex flex-col gap-4">
 									<h3 className="text-custom-white text-4xl">
