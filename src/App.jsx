@@ -36,7 +36,7 @@ function App() {
 				<div className="sticky min-h-[70vh] top-0 z-10 flex  flex-col justify-center gap-12 py-12 px-4 2lg:px-12">
 					<TechStack />
 				</div>
-				<div className="relative bg-custom-black min-h-[70vh] flex flex-col justify-center gap-24 z-20 py-12 px-4 2lg:px-12">
+				<div className="relative bg-custom-black min-h-[90vh] flex flex-col justify-center gap-24 z-20 py-12 px-4 2lg:px-12">
 					<Contact />
 				</div>
 			</div>

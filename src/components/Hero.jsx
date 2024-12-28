@@ -37,6 +37,17 @@ const Hero = () => {
 				ease: "power1.out",
 			}
 		);
+
+		timeline.fromTo(
+			"#blueSquares",
+			{ opacity: 0, x: -100 },
+			{
+				opacity: 1,
+				x: 0,
+				duration: 0.8,
+				ease: "circ.inOut",
+			}
+		);
 		timeline.fromTo(
 			"#avatarContainerText",
 			{ opacity: 0 },
@@ -46,7 +57,6 @@ const Hero = () => {
 				ease: "power1.out",
 			}
 		);
-
 		gsap.fromTo(
 			"#portfolioText",
 			{ opacity: 0, y: 50 },
@@ -54,7 +64,7 @@ const Hero = () => {
 				opacity: 1,
 				y: 0,
 				duration: 0.8,
-				ease: "power3.out",
+				ease: "circ.inOut",
 			}
 		);
 	});
@@ -127,11 +137,12 @@ const Hero = () => {
 				<div
 					id="h1TextContainer"
 					className="flex justify-between items-end md:mx-4 2xl:mb-[-1em]">
-					<div className="flex flex-row 2lg:flex-col gap-2 md:gap-4 2lg:gap-0">
+					<div className="flex flex-row items-center  gap-2 md:gap-4">
 						<img
+							id="blueSquares"
 							src={blueSquares}
 							alt="blue squares"
-							className="2lg:mb-[0.5em] w-[25px] md:w-[40px]"
+							className="w-[25px] md:w-[40px]"
 						/>
 
 						<AnimatedText

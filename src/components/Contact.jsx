@@ -10,7 +10,7 @@ const Contact = () => {
 		const timeline = gsap.timeline({
 			scrollTrigger: {
 				trigger: contactRef.current,
-				start: "top center",
+				start: "center bottom",
 			},
 		});
 
