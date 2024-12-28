@@ -31,6 +31,24 @@ const About = () => {
 			}
 		);
 	});
+	useGSAP(() => {
+		gsap.fromTo(
+			"#aboutText",
+			{
+				x: 300,
+				opacity: 0,
+			},
+			{
+				x: 0,
+				opacity: 1,
+				ease: "power1.out",
+				scrollTrigger: {
+					trigger: "#aboutText",
+					start: "bottom bottom",
+				},
+			}
+		);
+	});
 
 	useEffect(() => {
 		const animationOne = gsap.fromTo(
@@ -38,13 +56,13 @@ const About = () => {
 			{ opacity: 0.2 },
 			{
 				opacity: 1,
-				stagger: 0.1,
-				duration: 0.3,
+				stagger: 1,
+				duration: 1,
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: firstAboutTextRef.current,
-					start: "bottom bottom",
-					end: "center center",
+					start: "+=300 bottom",
+					end: "bottom +=300",
 					scrub: true,
 				},
 			}
@@ -55,8 +73,8 @@ const About = () => {
 			{ opacity: 0.2 },
 			{
 				opacity: 1,
-				stagger: 0.1,
-				duration: 0.3,
+				stagger: 0.2,
+				duration: 1,
 				ease: "power1.out",
 				scrollTrigger: {
 					trigger: secondAboutTextRef.current,
@@ -117,7 +135,7 @@ const About = () => {
 						duration={0.1}
 					/>
 				</div>
-				<div className="flex gap-6 items-start w-[50%]">
+				<div className="flex gap-6 items-start w-[50%]" id="aboutText">
 					<img src={squares2} alt="" className="w-[50px] mt-3" />
 					<p className="text-2xl font-satoshi-regular text-custom-black leading-10 ">
 						{`I've successfully completed multiple projects, allowing me to gain

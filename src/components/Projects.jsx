@@ -74,7 +74,7 @@ const Projects = () => {
 
 	return (
 		<>
-			<div id="projects" className="h-screen">
+			<div id="projects" className="h-[80vh] mt-[6em]">
 				<div className="flex items-center justify-center gap-6 absolute top-12 left-1/2 -translate-x-1/2">
 					<img src={squaresBlack} alt="" className="size-[60px]" />
 					<h2 className="text-custom-black uppercase text-7xl">Projects</h2>
