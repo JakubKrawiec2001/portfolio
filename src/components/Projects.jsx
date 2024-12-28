@@ -60,18 +60,17 @@ const Projects = () => {
 			ease: "none",
 			scrollTrigger: {
 				trigger: projectsContainerRef.current,
-				start: "bottom bottom",
+				start: "top top",
 				end: "+=" + projectsContainerRef.current.offsetWidth,
-				scrub: 0.1,
+				scrub: 0.5,
 				pin: true,
+				anticipatePin: 1,
 			},
 		});
-
 		return () => {
 			ScrollTrigger.getAll().forEach((st) => st.kill());
 		};
 	}, []);
-
 	return (
 		<>
 			<div id="projects" className="h-[80vh] mt-[6em]">
@@ -92,9 +91,17 @@ const Projects = () => {
 			<div
 				className="bg-custom-black px-4 2lg:px-12 flex items-center flex-nowrap space-x-10 h-screen"
 				ref={projectsContainerRef}>
-				<h2 className="text-custom-white uppercase text-7xl main-projects">
-					Main Projects
-				</h2>
+				<div className="main-projects">
+					<h2 className="text-custom-white uppercase text-7xl">
+						Main Projects
+					</h2>
+					<CustomLink
+						label="more projects"
+						link="https://github.com/JakubKrawiec2001"
+						containerClass="text-custom-white mt-6"
+						lineClass="bg-custom-white"
+					/>
+				</div>
 				{projects.map((project, index) => {
 					return (
 						<div
@@ -123,13 +130,13 @@ const Projects = () => {
 										})}
 									</div>
 								</div>
-								<img src={lines} alt="" />
+								<img src={lines} alt="" className="w-[30%]" />
 							</div>
 							<div className="flex justify-center gap-8 relative">
 								<img
 									src={project.img}
 									alt=""
-									className="w-[50%] object-contain"
+									className="w-[50%] object-contain rounded-[5px] shadow-lg"
 								/>
 								<div className="absolute bottom-0 right-0">
 									<CustomLink

@@ -48,7 +48,7 @@ export const projects = [
 			"typescript",
 			"firebase",
 			"tailwindcss",
-			"tenstack query",
+			"tanstack query",
 			"shadcn",
 			"react hook form",
 			"zod",
@@ -72,3 +72,8 @@ export const projects = [
 		img: moviecineProject,
 	},
 ];
+
+
+export const techStack = [
+	"react.js", "next.js", "typescript", "javascript", "html5", "css3", "sass", "tailwindcss", "git", "tanstack (react) query", "firebase", "appwrite", "shadcn/ui", "mongodb", "react hook form", "zod", "rest api"
+]
