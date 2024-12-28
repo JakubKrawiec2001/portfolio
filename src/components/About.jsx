@@ -92,29 +92,33 @@ const About = () => {
 	}, []);
 
 	return (
-		<div id="about" className="flex flex-col gap-28 mt-[12em] pb-28">
-			<div className="flex justify-between items-start">
-				<div className="flex gap-6 items-start w-[70%]">
+		<div
+			id="about"
+			className="flex flex-col gap-16 md:gap-28 mt-[8em] md:mt-[12em] pb-28">
+			<div className="flex flex-col md:flex-row gap-16 md:gap-0 justify-between items-start">
+				<div className="flex gap-6 items-start md:w-[70%] 2lg:w-[60%] order-1 md:order-0">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />
 
-					<div className="w-[70%]">
+					<div className="md:w-[70%]">
 						{`I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level.`
 							.split(" ")
 							.map((word, index) => (
 								<span
 									ref={(el) => (firstAboutTextRef.current[index] = el)}
 									key={index}
-									className="text-2xl font-satoshi-medium text-custom-black uppercase leading-10">
+									className="text-lg 2lg:text-2xl font-satoshi-medium text-custom-black uppercase leading-10">
 									{word}{" "}
 								</span>
 							))}
 					</div>
 				</div>
-				<h2 id="aboutHeading" className="text-custom-black uppercase text-7xl">
+				<h2
+					id="aboutHeading"
+					className="text-custom-black uppercase text-4xl xs:text-5xl xl:text-6xl 2xl:text-7xl order-0 md:order-1">
 					about me
 				</h2>
 			</div>
-			<div className="flex justify-between items-start">
+			<div className="flex flex-col md:flex-row gap-16 md:gap-0 justify-between items-start">
 				<div className="flex flex-col gap-2">
 					<AnimatedText
 						trigger="#aboutTrigger"
@@ -135,8 +139,8 @@ const About = () => {
 						duration={0.1}
 					/>
 				</div>
-				<div className="flex gap-6 items-start w-[50%]" id="aboutText">
-					<img src={squares2} alt="" className="w-[50px] mt-3" />
+				<div className="flex gap-6 items-start md:w-[50%]" id="aboutText">
+					<img src={squares2} alt="" className="md:w-[50px] mt-3" />
 					<p className="text-2xl font-satoshi-regular text-custom-black leading-10 ">
 						{`I've successfully completed multiple projects, allowing me to gain
             hands-on experience in technologies like React, Next.js, JavaScript,
@@ -146,11 +150,11 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-			<div className="flex justify-between items-end">
-				<div className="flex gap-6 items-start w-[70%]">
+			<div className="flex flex-col md:flex-row gap-16 md:gap-0 justify-between items-center md:items-end">
+				<div className="flex gap-6 items-start md:w-[70%]">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />
 
-					<div className="w-[70%]">
+					<div className="md:w-[70%]">
 						{`I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level.`
 							.split(" ")
 							.map((word, index) => (

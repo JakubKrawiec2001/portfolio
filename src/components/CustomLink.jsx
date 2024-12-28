@@ -8,7 +8,7 @@ const CustomLink = ({ label, link, containerClass, lineClass }) => {
 			rel="noreferrer"
 			className={`group flex gap-4 ${containerClass}`}>
 			<div className="flex flex-col gap-1 group-hover:gap-0 transition-all">
-				<p className="uppercase font-bitx text-3xl group-hover:text-custom-blue transition-colors">
+				<p className="uppercase font-bitx text-2xl lg:text-3xl group-hover:text-custom-blue transition-colors">
 					{label}
 				</p>
 				<div

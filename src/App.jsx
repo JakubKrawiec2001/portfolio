@@ -24,8 +24,9 @@ function App() {
 	requestAnimationFrame(raf);
 
 	return (
+		// TODO: overflow-x-hidden niszczy nachodzący scroll w techstack i contact
 		<main className="min-h-screen w-screen">
-			<div className="px-4 2lg:px-12">
+			<div className="px-4 2lg:px-12 overflow-x-hidden">
 				<Nav />
 				<MobileMenu />
 				<Hero />
