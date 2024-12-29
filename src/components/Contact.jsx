@@ -57,25 +57,32 @@ const Contact = () => {
 		);
 	});
 	return (
-		<>
-			<img id="borderedLines" src={lines} alt="" className="w-[40%]" />
-			<div ref={contactRef} className="flex flex-col items-center gap-8">
+		<div className="md:relative bg-custom-black 2lg:min-h-[90vh] flex flex-col justify-center gap-12 md:gap-24 z-20 pt-8 xs:pt-12 lg:pt-16 2lg:pt-0 md:py-12 px-4 2lg:px-12">
+			<img
+				id="borderedLines"
+				src={lines}
+				alt=""
+				className="md:w-[60%] 2lg:w-[50%] 2xl:w-[40%]"
+			/>
+			<div
+				ref={contactRef}
+				className="flex flex-col items-center gap-3 md:gap-8">
 				<span
 					id="hireMe"
-					className="text-4xl text-custom-white font-bitx uppercase opacity-50">
+					className="md:text-4xl text-custom-white font-bitx uppercase opacity-50">
 					hire me
 				</span>
 				<h2
 					id="contactHeading"
-					className="text-custom-white uppercase text-7xl">{`let's talk`}</h2>
+					className="text-custom-white uppercase text-3xl xs:text-4xl xl:text-6xl 2xl:text-7xl">{`let's talk`}</h2>
 				<p
 					id="mail"
-					className="text-custom-white text-8xl uppercase font-satoshi-regular">
+					className="text-custom-white xs:text-2xl md:text-4xl lg:text-6xl xl:text-7xl 2xl:text-8xl uppercase font-satoshi-regular">
 					kubakrawieckk04@gmail.com
 				</p>
 			</div>
 			;
-		</>
+		</div>
 	);
 };
 

@@ -34,12 +34,10 @@ function App() {
 			</div>
 			<Projects />
 			<div className="relative">
-				<div className="xs:sticky 2lg:min-h-[60vh] top-0 z-10 flex flex-col justify-center gap-12 py-12 px-4 2lg:px-12 overflow-x-hidden">
+				<div className="md:sticky 2lg:min-h-[60vh] top-0 z-10 flex flex-col justify-center gap-12 py-12 px-4 2lg:px-12 overflow-x-hidden">
 					<TechStack />
 				</div>
-				<div className="relative bg-custom-black min-h-[90vh] flex flex-col justify-center gap-24 z-20 py-12 px-4 2lg:px-12">
-					<Contact />
-				</div>
+				<Contact />
 			</div>
 			<Footer />
 		</main>

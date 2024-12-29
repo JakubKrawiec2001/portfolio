@@ -33,7 +33,7 @@ const Hero = () => {
 			{ x: -100, width: "0%" },
 			{
 				width: targetWidth,
-				duration: 1.5,
+				duration: 1,
 				ease: "power1.out",
 			}
 		);
@@ -149,7 +149,7 @@ const Hero = () => {
 							title="Hello World"
 							duration={0.6}
 							containerClass="font-bitx uppercase text-2xl md:text-5xl 2xl:text-6xl"
-							delay={3}
+							delay={1.5}
 						/>
 					</div>
 					<FramedText />
