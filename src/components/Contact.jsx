@@ -19,7 +19,7 @@ const Contact = () => {
 			{ y: 50, opacity: 0 },
 			{
 				y: 0,
-				opacity: 1,
+				opacity: 0.5,
 				duration: 0.3,
 				ease: "circ.inOut",
 			}

@@ -33,15 +33,15 @@ function App() {
 				<About />
 			</div>
 			<Projects />
-			<div className="relative">
-				<div className="sticky min-h-[70vh] top-0 z-10 flex  flex-col justify-center gap-12 py-12 px-4 2lg:px-12">
+			{/* <div className="relative">
+				<div className="sticky min-h-[70vh] top-0 z-10 flex  flex-col justify-center gap-12 py-12 px-4 2lg:px-12 overflow-x-hidden">
 					<TechStack />
 				</div>
 				<div className="relative bg-custom-black min-h-[90vh] flex flex-col justify-center gap-24 z-20 py-12 px-4 2lg:px-12">
 					<Contact />
 				</div>
 			</div>
-			<Footer />
+			<Footer /> */}
 		</main>
 	);
 }
