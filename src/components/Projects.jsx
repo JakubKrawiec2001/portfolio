@@ -163,7 +163,7 @@ const Projects = () => {
 					);
 				})}
 			</div>
-			<div className="bg-custom-black px-4 2lg:px-12 flex 2lg:hidden flex-col gap-6">
+			<div className="bg-custom-black pb-12 2lg:pb-0 px-4 2lg:px-12 flex 2lg:hidden flex-col gap-6">
 				<div className="main-projects mb-6">
 					<h2 className="text-custom-white uppercase text-4xl xs:text-5xl xl:text-6xl 2xl:text-7xl">
 						Main Projects
