@@ -3,8 +3,17 @@ import square2 from "/icons/squares-2.svg";
 import square from "/icons/squares-1.svg";
 import { useState, useEffect } from "react";
 
-const Nav = () => {
+const Nav = ({ lenis }) => {
 	const [isScrolled, setIsScrolled] = useState(false);
+
+	const handleScrollToSection = (targetId) => {
+		if (targetId) {
+			lenis.scrollTo(targetId, {
+				duration: 1.5,
+				easing: (t) => t,
+			});
+		}
+	};
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -33,6 +42,9 @@ const Nav = () => {
 						<a
 							href={link.path}
 							key={link.id}
+							onClick={() => {
+								handleScrollToSection(link.path);
+							}}
 							className="font-bitx text-custom-black uppercase lg:text-lg hover:text-custom-blue transition-colors">
 							{link.label}
 						</a>

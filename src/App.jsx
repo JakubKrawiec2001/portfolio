@@ -26,7 +26,7 @@ function App() {
 	return (
 		<main className="min-h-screen w-screen">
 			<div className="px-4 2lg:px-12 overflow-x-hidden">
-				<Nav />
+				<Nav lenis={lenis} />
 				<MobileMenu />
 				<Hero />
 				<About />
