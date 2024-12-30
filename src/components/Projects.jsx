@@ -145,10 +145,12 @@ const Projects = () => {
 								<img src={lines} alt="" className="w-[30%]" />
 							</div>
 							<div className="flex justify-start relative">
-								<img
-									src={project.img}
-									alt=""
-									className="2lg:w-[60%] object-contain rounded-[5px] shadow-lg"
+								<video
+									src={project.video}
+									autoPlay
+									loop
+									muted
+									className="object-contain w-[70%] rounded-[5px]"
 								/>
 								<div className="absolute bottom-0 right-0">
 									<CustomLink
@@ -179,7 +181,7 @@ const Projects = () => {
 					return (
 						<div
 							key={project.id}
-							className="flex flex-col gap-[4em] p-[2.2em] md:p-[3em]  relative bg-black rounded-[20px] overflow-hidden">
+							className="flex flex-col gap-[2em] md:gap-[4em] p-[2.2em] md:p-[3em]  relative bg-black rounded-[20px] overflow-hidden">
 							<div className="absolute bottom-[10%] left-1/2 translate-x-[-50%] bg-white blur-[100px]  opacity-30 size-[50%] rounded-full" />
 
 							<div className="flex flex-col gap-6 md:gap-8">
@@ -202,10 +204,12 @@ const Projects = () => {
 								</div>
 							</div>
 							<div className="flex flex-col justify-center gap-8 relative">
-								<img
-									src={project.img}
-									alt=""
-									className="object-contain rounded-[5px] shadow-lg"
+								<video
+									src={project.video}
+									autoPlay
+									loop
+									muted
+									className="object-contain md:w-[80%] rounded-[5px]"
 								/>
 								<CustomLink
 									label="live website"

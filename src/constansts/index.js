@@ -1,4 +1,7 @@
-import moviecineProject from "/images/project.jpg";
+// import moviecineProject from "/images/project.jpg";
+import moviecineVideo from "/videos/moviecine-video.mp4";
+import splitsyVideo from "/videos/splitsy-video.mp4";
+import mernstoreyVideo from "/videos/mernstore-video.mp4";
 
 export const navLinks = [
 	{
@@ -38,7 +41,7 @@ export const projects = [
 			"tmdb api",
 		],
 		link: "https://moviecine-app.vercel.app/",
-		img: moviecineProject,
+		video: moviecineVideo,
 	},
 	{
 		id: 2,
@@ -54,7 +57,7 @@ export const projects = [
 			"zod",
 		],
 		link: "https://splitsy-app.vercel.app/",
-		img: moviecineProject,
+		video: splitsyVideo,
 	},
 	{
 		id: 3,
@@ -69,11 +72,26 @@ export const projects = [
 			"stripe",
 		],
 		link: "https://mern-store-app.netlify.app/",
-		img: moviecineProject,
+		video: mernstoreyVideo,
 	},
 ];
 
-
 export const techStack = [
-	"react.js", "next.js", "typescript", "javascript", "html5", "css3", "sass", "tailwindcss", "git", "tanstack (react) query", "firebase", "appwrite", "shadcn/ui", "mongodb", "react hook form", "zod", "rest api"
-]
+	"react.js",
+	"next.js",
+	"typescript",
+	"javascript",
+	"html5",
+	"css3",
+	"sass",
+	"tailwindcss",
+	"git",
+	"tanstack (react) query",
+	"firebase",
+	"appwrite",
+	"shadcn/ui",
+	"mongodb",
+	"react hook form",
+	"zod",
+	"rest api",
+];
