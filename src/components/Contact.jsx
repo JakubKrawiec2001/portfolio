@@ -57,7 +57,9 @@ const Contact = () => {
 		);
 	});
 	return (
-		<div className="md:relative bg-custom-black 2lg:min-h-[90vh] flex flex-col justify-center gap-12 md:gap-24 z-20 pt-8 xs:pt-12 lg:pt-16 2lg:pt-0 md:py-12 px-4 2lg:px-12">
+		<div
+			id="contact"
+			className="md:relative bg-custom-black 2lg:min-h-[90vh] flex flex-col justify-center gap-12 md:gap-24 z-20 pt-8 xs:pt-12 lg:pt-16 2lg:pt-0 md:py-12 px-4 2lg:px-12">
 			<img
 				id="borderedLines"
 				src={lines}
