@@ -12,6 +12,8 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = () => {
 	const avatarContainerRef = useRef();
 
+	const currentYear = new Date().getFullYear();
+
 	useGSAP(() => {
 		const timeline = gsap.timeline();
 
@@ -114,7 +116,7 @@ const Hero = () => {
 					<div className="bg-custom-black w-[10px] h-[5px]" />
 				</div>
 				<p className="font-bitx uppercase text-custom-black opacity-40 text-sm md:text-xl lg:text-2xl leading-4 md:leading-7">
-					welcome to <br /> my portfolio 2024
+					welcome to <br /> my portfolio {currentYear}
 				</p>
 			</div>
 			<div

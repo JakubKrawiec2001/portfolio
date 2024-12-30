@@ -109,7 +109,7 @@ const Projects = () => {
 					</h2>
 					<CustomLink
 						label="more projects"
-						link="https://github.com/JakubKrawiec2001"
+						link="https://github.com/JakubKrawiec2001?tab=repositories"
 						containerClass="text-custom-white mt-6"
 						lineClass="bg-custom-white"
 					/>
@@ -170,7 +170,7 @@ const Projects = () => {
 					</h2>
 					<CustomLink
 						label="more projects"
-						link="https://github.com/JakubKrawiec2001"
+						link="https://github.com/JakubKrawiec2001?tab=repositories"
 						containerClass="text-custom-white mt-6"
 						lineClass="bg-custom-white"
 					/>
