@@ -99,14 +99,16 @@ const About = () => {
 				<div className="flex gap-6 items-start md:w-[70%] 2lg:w-[60%] order-1 md:order-0">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />
 
-					<div className="md:w-[70%]">
-						{`I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level.`
+					<div className="md:w-[70%] 2lg:w-full leading-10">
+						{`I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level. I've successfully completed multiple projects, allowing me to gain
+            hands-on experience in technologies like React, Next.js, JavaScript,
+            and TypeScript.`
 							.split(" ")
 							.map((word, index) => (
 								<span
 									ref={(el) => (firstAboutTextRef.current[index] = el)}
 									key={index}
-									className="text-lg 2lg:text-2xl font-satoshi-medium text-custom-black uppercase leading-10">
+									className="text-lg 2lg:text-2xl font-satoshi-medium text-custom-black uppercase">
 									{word}{" "}
 								</span>
 							))}
@@ -142,11 +144,7 @@ const About = () => {
 				<div className="flex gap-6 items-start md:w-[50%]" id="aboutText">
 					<img src={squares2} alt="" className="md:w-[50px] mt-3" />
 					<p className="text-2xl font-satoshi-regular text-custom-black leading-10 ">
-						{`I've successfully completed multiple projects, allowing me to gain
-            hands-on experience in technologies like React, Next.js, JavaScript,
-            and TypeScript. Every project I undertake is built with a commitment
-            to clean, maintainable code and a focus on delivering an outstanding
-            user experience.`}
+						{`My main goal is to grow as a Frontend Developer by gaining new skills and experience with large and interesting projects. I would like to learn from experienced developers, expanding my knowledge and skills. In the future, I dream of reaching a level that will allow me to work as a Fullstack Developer, and I would also like to explore React Native to develop mobile applications.`}
 					</p>
 				</div>
 			</div>
@@ -154,14 +152,14 @@ const About = () => {
 				<div className="flex gap-6 items-start md:w-[70%]">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />
 
-					<div className="md:w-[70%]">
-						{`I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level.`
+					<div className="md:w-[70%] leading-10">
+						{`I love the constant challenge and the fact that programming gives you the opportunity to create something from nothing - filling a blank page with code. I want to constantly develop myself, discover new technologies and implement projects that will be a new challenge for me.`
 							.split(" ")
 							.map((word, index) => (
 								<span
 									ref={(el) => (secondAboutTextRef.current[index] = el)}
 									key={index}
-									className="text-2xl font-satoshi-medium text-custom-black uppercase leading-10">
+									className="text-2xl font-satoshi-medium text-custom-black uppercase">
 									{word}{" "}
 								</span>
 							))}
