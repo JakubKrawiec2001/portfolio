@@ -148,7 +148,7 @@ const About = () => {
 					</p>
 				</div>
 			</div>
-			<div className="flex flex-col md:flex-row gap-16 md:gap-0 justify-between items-center md:items-end">
+			<div className="flex flex-col md:flex-row gap-16 md:gap-0 justify-between items-start md:items-end">
 				<div className="flex gap-6 items-start md:w-[70%]">
 					<img src={squares1} alt="" className="w-[50px] mt-3" />
 
