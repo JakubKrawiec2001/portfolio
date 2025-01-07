@@ -1,4 +1,4 @@
-import arrow from "/icons/arrow.svg";
+import arrow from "/images/arrow.svg";
 
 const CustomLink = ({ label, link, containerClass, lineClass }) => {
 	return (

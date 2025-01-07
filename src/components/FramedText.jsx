@@ -1,7 +1,7 @@
-import border1 from "/icons/border-1.svg";
-import border2 from "/icons/border-2.svg";
-import border3 from "/icons/border-3.svg";
-import border4 from "/icons/border-4.svg";
+import border1 from "/images/border-1.svg";
+import border2 from "/images/border-2.svg";
+import border3 from "/images/border-3.svg";
+import border4 from "/images/border-4.svg";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

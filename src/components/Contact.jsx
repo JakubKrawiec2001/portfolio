@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import lines from "/icons/bordered-lines.svg";
+import lines from "/images/bordered-lines.svg";
 import gsap from "gsap";
 import { useRef } from "react";
 

@@ -3,8 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import AnimatedText from "./AnimatedText";
 import CustomLink from "./CustomLink";
-import squares1 from "/icons/squares-1.svg";
-import squares2 from "/icons/squares-2.svg";
+import squares1 from "/images/squares-1.svg";
+import squares2 from "/images/squares-2.svg";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
