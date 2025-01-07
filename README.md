@@ -1,8 +1,5 @@
-# React + Vite
+# Hi there, I'm Jakub Krawiec
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level. I've successfully completed multiple projects, allowing me to gain hands-on experience in technologies like React, Next.js, JavaScript, and TypeScript. Every project I undertake is built with a commitment to clean, maintainable code and a focus on delivering an outstanding user experience. A student at the Academy of Computer Science and Technology (ATINS) in Wroclaw. I turned my passion for programming into a professional activity, founding a company in early 2024. I am engaged in creating modern and professional websites for clients. I am passionate about developing my skills and expanding my knowledge of new technologies. I want to work on larger projects, constantly gaining new experience and skills. In my free time, I love skiing.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[Portfolio](https://splitsy-app.vercel.app/)  
