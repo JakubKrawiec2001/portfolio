@@ -2,4 +2,4 @@
 
 I'm a passionate frontend developer with a love for creating beautiful, functional, and responsive web applications. Constantly learning, experimenting, and pushing my skills to the next level. I've successfully completed multiple projects, allowing me to gain hands-on experience in technologies like React, Next.js, JavaScript, and TypeScript. Every project I undertake is built with a commitment to clean, maintainable code and a focus on delivering an outstanding user experience. A student at the Academy of Computer Science and Technology (ATINS) in Wroclaw. I turned my passion for programming into a professional activity, founding a company in early 2024. I am engaged in creating modern and professional websites for clients. I am passionate about developing my skills and expanding my knowledge of new technologies. I want to work on larger projects, constantly gaining new experience and skills. In my free time, I love skiing.
 
-[Portfolio](https://splitsy-app.vercel.app/)  
+## [🔗 Check My Portfolio](https://splitsy-app.vercel.app/)  
