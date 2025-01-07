@@ -99,7 +99,7 @@ const TechStack = () => {
           id="techSectionTwo"
           className="flex flex-wrap gap-6 gap-y-2 md:gap-y-4 xl:justify-between"
         >
-          {techStack.slice(10, 17).map((tech, i) => {
+          {techStack.slice(9, 16).map((tech, i) => {
             return (
               <p
                 key={i}
